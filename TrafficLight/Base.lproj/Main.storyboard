@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,56 +14,65 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-J6-vLo" userLabel="Red Light">
-                                <rect key="frame" x="140" y="84.000000000000014" width="134.33333333333337" height="134.33333333333337"/>
+                                <rect key="frame" x="124" y="40" width="72" height="72"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nVh-J6-vLo" secondAttribute="height" multiplier="1:1" id="lnc-Fb-Sk8"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yz6-XV-Go7" userLabel="Yellow Light">
-                                <rect key="frame" x="140" y="261" width="134.33333333333337" height="134.33333333333337"/>
+                                <rect key="frame" x="124" y="155" width="72" height="72"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Yz6-XV-Go7" secondAttribute="height" multiplier="1:1" id="upM-Or-VVH"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-UY-7Jv" userLabel="Green Light">
-                                <rect key="frame" x="140" y="438.66666666666669" width="134.33333333333337" height="134.33333333333331"/>
+                                <rect key="frame" x="124" y="270" width="72" height="72"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Gpm-UY-7Jv" secondAttribute="height" multiplier="1:1" id="4Pu-vg-ITy"/>
+                                    <constraint firstAttribute="width" secondItem="Gpm-UY-7Jv" secondAttribute="height" multiplier="1:1" id="Bce-NW-AJJ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFY-iL-i4T">
-                                <rect key="frame" x="107" y="780" width="200" height="42"/>
+                                <rect key="frame" x="106.5" y="404" width="107" height="36"/>
                                 <color key="backgroundColor" name="AccentColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Du-p1-kqr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NFY-iL-i4T" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:112" id="08Z-v4-WFy"/>
-                            <constraint firstItem="Gpm-UY-7Jv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.149925" id="8J6-e9-wB1"/>
                             <constraint firstItem="Yz6-XV-Go7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BtR-OT-hqU"/>
                             <constraint firstItem="nVh-J6-vLo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PAJ-xx-9Nw"/>
-                            <constraint firstItem="Gpm-UY-7Jv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PQW-bo-sNF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NFY-iL-i4T" secondAttribute="bottom" constant="40" id="Sqs-fd-09h"/>
                             <constraint firstItem="nVh-J6-vLo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="TBI-So-x5g"/>
                             <constraint firstItem="nVh-J6-vLo" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.149925" id="Xe5-4b-9US"/>
                             <constraint firstItem="NFY-iL-i4T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Y8P-T1-bL3"/>
-                            <constraint firstItem="Gpm-UY-7Jv" firstAttribute="top" secondItem="Yz6-XV-Go7" secondAttribute="bottom" constant="43.333333333333428" id="q4h-lX-VbV"/>
-                            <constraint firstItem="Yz6-XV-Go7" firstAttribute="top" secondItem="nVh-J6-vLo" secondAttribute="bottom" constant="42.666666666666629" id="s2C-gn-PRs"/>
+                            <constraint firstItem="Gpm-UY-7Jv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.149925" id="ehE-33-TT8"/>
+                            <constraint firstItem="Gpm-UY-7Jv" firstAttribute="top" secondItem="Yz6-XV-Go7" secondAttribute="bottom" constant="43" id="oFp-dF-U0k"/>
+                            <constraint firstItem="Gpm-UY-7Jv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qJg-6B-GMM"/>
+                            <constraint firstItem="Yz6-XV-Go7" firstAttribute="top" secondItem="nVh-J6-vLo" secondAttribute="bottom" constant="43" id="s2C-gn-PRs"/>
                             <constraint firstItem="Yz6-XV-Go7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.149925" id="tG9-kV-JD7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="Gpm-UY-7Jv" id="oK1-mM-DIs"/>
+                        <outlet property="redLight" destination="nVh-J6-vLo" id="K7e-Xi-qhX"/>
+                        <outlet property="startButton" destination="NFY-iL-i4T" id="730-7k-aLO"/>
+                        <outlet property="yellowLight" destination="Yz6-XV-Go7" id="tE9-2c-4T3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
